@@ -1,0 +1,22 @@
+.phrase_wrap {
+  position: relative;
+  padding-top: 475px;
+  height: 213px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.phrase_wrap img {
+  position: absolute;
+  width: 100%;
+  height: 213px;
+  z-index: 2;
+}
+
+.phrase_wrap p {
+  font-family: Museo, serif;
+  font-size: 24px;
+  padding-top: 110px;
+  z-index: 3;
+}
