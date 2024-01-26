@@ -7,7 +7,7 @@ import air from "../assets/photo-air.png";
 
 const Method = () => {
   return (
-    <div className={styles.method_wrap}>
+    <section className={styles.method_wrap}>
       <h3>Méthode de Travail</h3>
       <div className={styles.method_content}>
         <div className={styles.photos}>
@@ -76,7 +76,7 @@ const Method = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

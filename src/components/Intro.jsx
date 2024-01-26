@@ -10,7 +10,7 @@ import languageIcon from "../assets/language.svg";
 const Intro = () => {
   const [language, setLanguage] = useState("");
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <div className={styles.background}>
         <video src={videobg} autoPlay loop muted></video>
       </div>
@@ -45,7 +45,7 @@ const Intro = () => {
           <h2>Carole Mac Veigh</h2>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

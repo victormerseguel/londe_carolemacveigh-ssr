@@ -26,10 +26,6 @@
   z-index: -1;
 }
 
-video {
-  height: 726px;
-}
-
 .content {
   max-width: 1440px;
   margin: 0 auto;
@@ -48,14 +44,14 @@ nav span img:first-of-type {
   width: 81px;
 }
 
-ul {
+.content ul {
   display: flex;
   justify-content: end;
   gap: 28px;
   width: 90%;
 }
 
-li {
+.content li {
   list-style: none;
   font-family: "Open Sans", sans-serif;
   font-size: 10pt;
@@ -63,14 +59,14 @@ li {
   cursor: pointer;
 }
 
-select,
-li {
+.content select,
+.content li {
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   color: #695032;
 }
 
-select {
+.content select {
   font-size: 9pt;
   background-color: transparent;
   border: none;
@@ -104,17 +100,17 @@ select {
   left: 0;
 }
 
-h1,
-h2 {
+.title_wrap h1,
+.title_wrap h2 {
   font-family: Museo;
   color: #695032;
   font-weight: 100;
 }
 
-h1 {
+.title_wrap h1 {
   font-size: 27px;
 }
 
-h2 {
+.title_wrap h2 {
   font-size: 20px;
 }
