@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.hide {
+  display: none;
+}
+
+.fr {
+  color: red;
+}
+.pt {
+  color: green;
+}
+.en {
+  color: blue;
+}

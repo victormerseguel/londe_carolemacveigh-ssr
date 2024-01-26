@@ -7,8 +7,8 @@ import videobg from "../assets/videobackground-2.webm";
 import londelogo from "../assets/londe-logo.png";
 import languageIcon from "../assets/language.svg";
 
-const Intro = () => {
-  const [language, setLanguage] = useState("");
+const Intro = (language, setLanguage) => {
+  // const [language, setLanguage] = useState("");
   return (
     <header className={styles.container}>
       <div className={styles.background}>

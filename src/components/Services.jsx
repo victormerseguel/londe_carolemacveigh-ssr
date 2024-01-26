@@ -1,17 +1,27 @@
 import styles from "./Services.module.css";
 
 import ServicesCard from "./ServicesCard";
+import { services_db } from "../databases/services_db";
 import seedoflife from "../assets/icon-seedoflife.png";
 
 const Services = () => {
   return (
-    <section>
-      <h1>Services</h1>
-      <ServicesCard
-        icon={seedoflife}
-        title="L'Onde Bienveillante"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-      />
+    <section className={styles.services_wrap}>
+      <h3>Services</h3>
+      <div className={styles.services_cards}>
+        {services_db.map((service) => (
+          <ServicesCard
+            key={service.title_fr}
+            icon={service.icon}
+            title_fr={service.title_fr}
+            title_pt={service.title_pt}
+            title_en={service.title_en}
+            text_fr={service.text_fr}
+            text_pt={service.text_pt}
+            text_en={service.text_en}
+          />
+        ))}
+      </div>
     </section>
   );
 };
