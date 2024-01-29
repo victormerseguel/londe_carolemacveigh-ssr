@@ -1,24 +1,19 @@
 import styles from "./Services.module.css";
 
 import ServicesCard from "./ServicesCard";
-import { services_db } from "../databases/services_db";
-import seedoflife from "../assets/icon-seedoflife.png";
+import { services_db, services_title } from "../databases/services_db";
 
-const Services = () => {
+const Services = ({ lang }) => {
   return (
     <section className={styles.services_wrap}>
-      <h3>Services</h3>
+      <h3>{services_title[0][lang]}</h3>
       <div className={styles.services_cards}>
         {services_db.map((service) => (
           <ServicesCard
-            key={service.title_fr}
+            key={service.title[lang]}
             icon={service.icon}
-            title_fr={service.title_fr}
-            title_pt={service.title_pt}
-            title_en={service.title_en}
-            text_fr={service.text_fr}
-            text_pt={service.text_pt}
-            text_en={service.text_en}
+            title={service.title[lang]}
+            text={service.text[lang]}
           />
         ))}
       </div>

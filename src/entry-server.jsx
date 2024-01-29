@@ -1,12 +1,18 @@
-import React from 'react'
-import ReactDOMServer from 'react-dom/server'
-import App from './App'
+import React from "react";
+import ReactDOMServer from "react-dom/server";
+import { StaticRouter } from "react-router-dom/server";
+
+import App from "./App";
 
 export function render() {
+  console.log(render.url);
+
   const html = ReactDOMServer.renderToString(
     <React.StrictMode>
-      <App />
+      <StaticRouter location={render.url}>
+        <App />
+      </StaticRouter>
     </React.StrictMode>
-  )
-  return { html }
+  );
+  return { html };
 }
