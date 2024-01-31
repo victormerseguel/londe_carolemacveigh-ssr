@@ -38,10 +38,26 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 30px 60px;
+  position: fixed;
+  z-index: 5;
+  transition: background-color 0.5s ease;
+}
+
+.menu_scroll {
+  background-color: #fffbf6 !important;
+  transition: background-color 0.5s ease;
+  height: 80px;
+  border-bottom: #caaf8a8f 1px solid;
 }
 
 nav span img:first-of-type {
   width: 81px;
+  transition: width 0.3s ease;
+}
+
+.menu_scroll span img:first-of-type {
+  width: 40px;
+  transition: width 0.3s ease;
 }
 
 .content ul {
@@ -49,6 +65,19 @@ nav span img:first-of-type {
   justify-content: end;
   gap: 28px;
   width: 90%;
+}
+
+.content a {
+  text-decoration: none;
+  color: #695032;
+}
+
+.content a:visited {
+  color: #695032;
+}
+
+.content a:hover {
+  color: #caaf8a;
 }
 
 .content li {
@@ -113,4 +142,8 @@ nav span img:first-of-type {
 
 .title_wrap h2 {
   font-size: 20px;
+}
+
+.active {
+  border-bottom: #695032 1px solid;
 }

@@ -89,4 +89,14 @@ select:focus {
   font-weight: 100;
   color: #695032;
   margin: 0 auto;
+  cursor: pointer;
+}
+
+.contacts_content input[type="submit"]:hover {
+  background-color: #695032;
+  color: #fffbf6;
+}
+
+.incomplete {
+  color: red;
 }

@@ -88,9 +88,24 @@ const footer_db = [
     en: navbar_db[4].en,
   },
   {
-    fr: `COPYRIGHT © ${currentYear} L'ONDE - CAROLE MAC VEIGH | conditions d'utilisation |  concepteur de sites Web: VICTOR MERSEGUEL`,
-    pt: `COPYRIGHT © ${currentYear} L'ONDE - CAROLE MAC VEIGH | termos de uso | web designer: VICTOR MERSEGUEL`,
-    en: `COPYRIGHT © ${currentYear} L'ONDE - CAROLE MAC VEIGH | conditions of use | web designer: VICTOR MERSEGUEL`,
+    fr: `COPYRIGHT © ${currentYear} L'ONDE - CAROLE MAC VEIGH | `,
+    pt: `COPYRIGHT © ${currentYear} L'ONDE - CAROLE MAC VEIGH | `,
+    en: `COPYRIGHT © ${currentYear} L'ONDE - CAROLE MAC VEIGH | `,
+  },
+  {
+    fr: `conditions d'utilisation`,
+    pt: `termos de uso`,
+    en: `conditions of use`,
+  },
+  {
+    fr: ` | concepteur de sites Web: `,
+    pt: ` | web designer: `,
+    en: ` | web designer: `,
+  },
+  {
+    fr: `Victor Merseguel`,
+    pt: `Victor Merseguel`,
+    en: `Victor Merseguel`,
   },
 ];
 

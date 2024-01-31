@@ -2,15 +2,16 @@ import React from "react";
 import ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 
-import App from "./App";
+import Router from "./Router";
+import { GlobalStorage } from "./hooks/GlobalContext";
 
 export function render() {
-  console.log(render.url);
-
   const html = ReactDOMServer.renderToString(
     <React.StrictMode>
       <StaticRouter location={render.url}>
-        <App />
+        <GlobalStorage>
+          <Router />
+        </GlobalStorage>
       </StaticRouter>
     </React.StrictMode>
   );

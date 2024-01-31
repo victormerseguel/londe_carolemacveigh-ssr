@@ -3,10 +3,24 @@ import styles from "./About.module.css";
 import { about_db, about_title } from "../databases/about_db";
 
 import carole_photo from "../assets/carole-photo.png";
+import { useContext, useEffect, useRef } from "react";
+import { GlobalContext } from "../hooks/GlobalContext";
 
 const About = ({ lang }) => {
+  let { aboutVisible, setAboutVisible, options } = useContext(GlobalContext);
+  const aboutRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setAboutVisible(+`${Math.floor(entry.intersectionRatio * 100)}`);
+    }, options);
+
+    observer.observe(aboutRef.current);
+  }, [aboutVisible]);
+
   return (
-    <section className={styles.about_wrap}>
+    <section className={styles.about_wrap} id="about" ref={aboutRef}>
       <h3>{about_title[0][lang]}</h3>
       <div className={styles.about_content}>
         <div className={styles.about_img_wrap}>
