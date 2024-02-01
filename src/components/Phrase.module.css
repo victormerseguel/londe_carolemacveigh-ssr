@@ -10,13 +10,32 @@
 .phrase_wrap img {
   position: absolute;
   width: 100%;
-  height: 213px;
+  min-height: 213px;
   z-index: 2;
 }
 
 .phrase_wrap p {
   font-family: Museo, serif;
   font-size: 24px;
-  padding-top: 110px;
+  text-align: center;
+  padding: 110px 20px 50px;
   z-index: 3;
+}
+
+@media (max-width: 889px) {
+  .phrase_wrap p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .phrase_wrap p {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 348px) {
+  .phrase_wrap p {
+    padding-top: 80px;
+  }
 }

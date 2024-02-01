@@ -4,14 +4,16 @@ export const GlobalContext = createContext();
 
 export const GlobalStorage = ({ children }) => {
   const [language, setLanguage] = useState("");
-  const [globalLanguage, setglobalLanguage] = useState();
+  let globalLanguage;
+
   const [homeVisible, setHomeVisible] = useState();
   const [methodVisible, setMethodVisible] = useState();
   const [servicesVisible, setServicesVisible] = useState();
   const [aboutVisible, setAboutVisible] = useState();
   const [contactsVisible, setContactsVisible] = useState();
-  const [menuControll, setMenuControll] = useState(true);
-  const [menuState, setMenuState] = useState();
+  const [menuState, setMenuState] = useState("home");
+  const [menuMobile, setMenuMobile] = useState(false);
+  const [menuMobileLanguage, setMenuMobileLanguage] = useState(false);
 
   let options = {
     threshold: [],
@@ -28,22 +30,20 @@ export const GlobalStorage = ({ children }) => {
     contactsVisible,
   ];
 
-  if (menuControll) {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        if (order[0] > order[1]) {
-          setMenuState("home");
-        } else if (order[1] > order[2]) {
-          setMenuState("method");
-        } else if (order[2] > order[3]) {
-          setMenuState("services");
-        } else if (order[3] > order[4]) {
-          setMenuState("about");
-        } else {
-          setMenuState("contacts");
-        }
-      });
-    }
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", () => {
+      if (order[0] > order[1]) {
+        setMenuState("home");
+      } else if (order[1] > order[2]) {
+        setMenuState("method");
+      } else if (order[2] > order[3]) {
+        setMenuState("services");
+      } else if (order[3] > order[4]) {
+        setMenuState("about");
+      } else {
+        setMenuState("contacts");
+      }
+    });
   }
 
   return (
@@ -52,7 +52,6 @@ export const GlobalStorage = ({ children }) => {
         language,
         setLanguage,
         globalLanguage,
-        setglobalLanguage,
         homeVisible,
         setHomeVisible,
         methodVisible,
@@ -63,8 +62,12 @@ export const GlobalStorage = ({ children }) => {
         setAboutVisible,
         contactsVisible,
         setContactsVisible,
-        menuControll,
-        setMenuControll,
+        menuState,
+        setMenuState,
+        menuMobile,
+        setMenuMobile,
+        menuMobileLanguage,
+        setMenuMobileLanguage,
         options,
       }}
     >

@@ -147,3 +147,65 @@ nav span img:first-of-type {
 .active {
   border-bottom: #695032 1px solid;
 }
+
+.menu_mobile {
+  display: none;
+}
+
+@media (max-width: 889px) {
+  nav {
+    padding: 30px;
+  }
+
+  .content ul {
+    gap: 23px;
+  }
+
+  .content li {
+    font-size: 12px;
+  }
+}
+@media (max-width: 740px) {
+  .title_wrap {
+    width: 100%;
+    left: 0;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu_desktop {
+    display: none;
+  }
+
+  .menu_mobile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+  }
+
+  .menu_mobile img {
+    width: 31px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .title_wrap h1 {
+    font-size: 24px;
+  }
+
+  .title_wrap h2 {
+    font-size: 17px;
+  }
+}

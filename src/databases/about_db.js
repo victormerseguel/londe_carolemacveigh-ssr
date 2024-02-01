@@ -1,8 +1,8 @@
 export const about_title = [
   {
     fr: "À Propos de Moi",
-    pt: "Sobre mim",
-    en: "about me",
+    pt: "Sobre Mim",
+    en: "About Me",
   },
 ];
 

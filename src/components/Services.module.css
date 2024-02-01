@@ -24,3 +24,15 @@
 .services_cards img {
   padding-top: 28px;
 }
+
+@media (max-width: 889px) {
+  .services_cards {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 889px) {
+  .services_cards {
+    gap: 20px;
+  }
+}

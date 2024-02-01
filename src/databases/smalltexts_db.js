@@ -93,14 +93,14 @@ const footer_db = [
     en: `COPYRIGHT © ${currentYear} L'ONDE - CAROLE MAC VEIGH | `,
   },
   {
-    fr: `conditions d'utilisation`,
-    pt: `termos de uso`,
-    en: `conditions of use`,
+    fr: `conditions d'utilisation |`,
+    pt: `termos de uso |`,
+    en: `conditions of use |`,
   },
   {
-    fr: ` | concepteur de sites Web: `,
-    pt: ` | web designer: `,
-    en: ` | web designer: `,
+    fr: ` concepteur de sites Web: `,
+    pt: ` web designer: `,
+    en: ` web designer: `,
   },
   {
     fr: `Victor Merseguel`,

@@ -7,7 +7,7 @@ footer {
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 60px;
+  margin: 0 20px 60px;
 }
 
 .footer_content a {
@@ -47,4 +47,41 @@ footer {
 
 .footer_legaltext a:visited {
   color: #695032;
+}
+
+.mobile {
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  footer {
+    padding: 20px 15px 35px;
+  }
+
+  .footer_content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .footer_center img {
+    width: 67px;
+  }
+
+  .footer_left a {
+    font-size: 12px;
+  }
+
+  .footer_legaltext {
+    font-size: 10px;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
 }

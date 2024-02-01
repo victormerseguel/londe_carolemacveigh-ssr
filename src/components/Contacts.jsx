@@ -1,12 +1,14 @@
 import { contacts_db } from "../databases/smalltexts_db";
 import styles from "./Contacts.module.css";
 
+import { useState, useRef, useContext, useEffect } from "react";
+import { GlobalContext } from "../hooks/GlobalContext";
+import emailjs from "@emailjs/browser";
+
 import local_pin from "../assets/icon-local.svg";
 import phone from "../assets/icon-phone.svg";
 import mail from "../assets/icon-mail.svg";
 import instagram from "../assets/icon-instagram.svg";
-import { useState, useRef, useContext, useEffect } from "react";
-import { GlobalContext } from "../hooks/GlobalContext";
 
 const Contacts = ({ lang }) => {
   const [name, setName] = useState("");
@@ -30,12 +32,30 @@ const Contacts = ({ lang }) => {
       return;
     }
 
-    setName("");
-    setEmail("");
-    setMessage("");
-    setNameValid(null);
-    setEmailValid(null);
-    setMessageValid(null);
+    const templareParams = {
+      from_name: name,
+      message: message,
+      email: email,
+    };
+
+    try {
+      const res = await emailjs.send(
+        "serviceId",
+        "templateId",
+        templareParams,
+        "publicKey"
+      );
+      console.log("Email enviado", res.status, res.text);
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      setNameValid(null);
+      setEmailValid(null);
+      setMessageValid(null);
+    } catch (error) {
+      console.log("Error: ", error);
+    }
   };
 
   useEffect(() => {
@@ -51,15 +71,15 @@ const Contacts = ({ lang }) => {
     <section className={styles.contacts_wrap} id="contacts" ref={contactsRef}>
       <h3>{contacts_db[0][lang]}</h3>
       <div className={styles.contacts_content}>
-        <div className={styles.contacts_right}>
-          <div className={styles.contacts_info}>
+        <div>
+          {/* <div className={styles.contacts_info}>
             <img src={local_pin} alt="local pin" />
             <p>
               47 rua des Couronnes
               <br />
               75020 Paris, France
             </p>
-          </div>
+          </div> */}
           <div className={styles.contacts_info}>
             <img src={phone} alt="phone" />
             <p>+351 123 456 789</p>

@@ -100,3 +100,14 @@ select:focus {
 .incomplete {
   color: red;
 }
+
+@media (max-width: 889px) {
+  .contacts_content {
+    flex-direction: column-reverse;
+  }
+
+  form {
+    width: 90% !important;
+    max-width: 430px !important;
+  }
+}

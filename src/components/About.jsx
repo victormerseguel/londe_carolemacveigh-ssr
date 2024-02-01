@@ -21,9 +21,12 @@ const About = ({ lang }) => {
 
   return (
     <section className={styles.about_wrap} id="about" ref={aboutRef}>
+      <div className={styles.about_img_wrap + " " + styles.mobile}>
+        <img src={carole_photo} alt="Carole Mac Veigh" />
+      </div>
       <h3>{about_title[0][lang]}</h3>
       <div className={styles.about_content}>
-        <div className={styles.about_img_wrap}>
+        <div className={styles.about_img_wrap + " " + styles.desktop}>
           <img src={carole_photo} alt="Carole Mac Veigh" />
         </div>
         <div className={styles.about_text}>

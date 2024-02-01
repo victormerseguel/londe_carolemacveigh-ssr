@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+  padding: 0 20px;
 }
 
 .method_wrap h3 {
@@ -31,6 +32,12 @@
   width: 100%;
 }
 
+.photos_mobile_wrap,
+.photos_mobile_wrap img {
+  width: 100%;
+  padding-top: 20px;
+}
+
 .text_wrap {
   margin-bottom: 100px;
 }
@@ -42,4 +49,47 @@
   line-height: 1.6;
   margin-bottom: 15px;
   max-width: 558px;
+}
+
+@media (min-width: 890px) {
+  .desktop {
+    display: block;
+  }
+
+  .tablet,
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 889px) {
+  .photos {
+    min-width: 100px;
+    max-width: 203px;
+  }
+}
+
+@media (max-width: 890px) and (min-width: 640px) {
+  .desktop,
+  .mobile {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .method_wrap h3 {
+    padding-top: 30px;
+  }
+  .photos,
+  .desktop,
+  .tablet {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
 }
